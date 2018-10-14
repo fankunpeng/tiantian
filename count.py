@@ -8,9 +8,10 @@ def count(lst, target):
         return count(lst[1:], target)
 
 
-# 循环版
+# 迭代版
 def for_count(lst, target):
     counter = 0
+    # 对 lst 中的每一个 element, 都执行这个操作
     for item in lst:
         if item == target:
             counter = counter + 1
@@ -30,17 +31,18 @@ def tail_count(lst, target):
     return inner(0, lst, target)
 
 
-# while 版
+# while 循环 版
 def while_count(lst, target):
     counter = 0
     while True:
         if len(lst) == 0:
-            return counter
+            continue
         if lst[0] == target:
             counter += 1
             lst = lst[1:]
         else:
             lst = lst[1:]
+    return counter
 
 
 '''
