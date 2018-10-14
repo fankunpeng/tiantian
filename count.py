@@ -36,7 +36,7 @@ def while_count(lst, target):
     counter = 0
     while True:
         if len(lst) == 0:
-            continue
+            break
         if lst[0] == target:
             counter += 1
             lst = lst[1:]
