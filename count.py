@@ -15,7 +15,7 @@ def count(lst, target):
 
 # 迭代版
 def for_count(lst, target):
-    counter = 0
+    counter = 0   # 定义局部变量
     # 对 lst 中的每一个 element, 都执行这个操作
     for item in lst:
         if item == target:
@@ -24,23 +24,21 @@ def for_count(lst, target):
 
 
 # 尾递归版
-def inner(counter, lst, target):
-    if len(lst) == 0:
-        return counter
-    if lst[0] == target:
-        return inner(counter + 1, lst[1:], target)
-    return inner(counter, lst[1:], target)
-
-
 def tail_count(lst, target):
-    return inner(0, lst, target)
+    def inner(counter, lst, target):  # 此处定义
+        if len(lst) == 0:
+            return counter
+        if lst[0] == target:
+            return inner(counter + 1, lst[1:], target)
+        return inner(counter, lst[1:], target)
+    return inner(0, lst, target)  # 此处调用
 
 
 # while 循环 版
 def while_count(lst, target):
     counter = 0
     while True:
-        if len(lst) == 0:
+        if len(lst) == 0:  # 跳出条件
             break  # 打断 while 循环
         if lst[0] == target:
             counter += 1
