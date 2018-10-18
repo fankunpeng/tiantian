@@ -27,7 +27,7 @@
     result = x in s # result = True
     #+END_SRC
 *** s + t
-    返回 s 和 t 连接之后的新对象
+    连接 s 和 t
     #+BEGIN_SRC python
       s = [1, 2, 3]
       t = [4, 5]
@@ -64,3 +64,33 @@
     result = min(s) # result = 1
     #+END_SRC
 ** LIST(顺序变长容器) 
+*** s[i] = x 
+    s 中索引为 i 的项被 x 取代
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    result = s[1] # result = 2
+    s[1] = 0 # s = [1, 1, 3, 4]
+    result = s[1] # result = 1
+    #+END_SRC
+*** s.append(x)
+    在 s 后添加 x
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    x = 1
+    s.append(x) # s = [1, 2, 3, 4, 1]
+    #+END_SRC
+*** s *= n
+    用 n 个连接的 s 取代 s 原来的内容
+    #+BEGIN_SRC python
+    s = [1, 2]
+    s = s * 2  # s = [1, 2, 1, 2]
+    #+END_SRC
+*** s.insert(i, x)
+    将 x 插到 s 中 i 指定的索引位置（slice position), 等同于 s[i:i]=[x]
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    s.insert(0, 1) # s = [1, 1, 2, 3, 4]
+    s.insert(-1, 1) # s = [1, 1, 2, 3, 1, 4]
+    s[0:0]=[0] # s = [0, 1, 1, 2, 3, 1, 4]
+    #+END_SRC
+
