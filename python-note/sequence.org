@@ -63,7 +63,7 @@
     s = [1, 2, 3, 4]
     result = min(s) # result = 1
     #+END_SRC
-** LIST(顺序变长容器) 
+** LIST(顺序可变容器) 
 *** s[i] = x 
     s 中索引为 i 的项被 x 取代
     #+BEGIN_SRC python
@@ -99,5 +99,17 @@
     s = [1, 2, 3, 4]
     result = s.pop(0) # s = [2, 3, 4], result = 1
     result = s.pop() # s = [2, 3], result = 4
+    #+END_SRC
+*** s.reverse()
+    反转 s
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    s.reverse() # s = [4, 3, 2, 1]
+    #+END_SRC
+*** s.extend(t) or s += t
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    t = [5, 6]
+    s.extend(t) # s = [1, 2, 3, 4, 5, 6]
     #+END_SRC
 
