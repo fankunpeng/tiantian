@@ -13,3 +13,13 @@
   - x :: 满足 s 限制的任意对象
 * LIST(顺序变长容器)
 ** operation
+*** x in s
+    如果 s 中某项和 x 相等，返回 True, 否则返回 False
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    x = 1
+    result = x in s # result = True
+    x = 5
+    result = x in s # result = False
+    #+END_SRC
+*** 
