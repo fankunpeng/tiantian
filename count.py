@@ -13,12 +13,16 @@ def count(lst, target):
         return count(lst[1:], target)
 
 
+# arr = [1, 2, 3, 4, 2, 1] target = 2
+# arr = [2, 3, 4, 2, 1] target = 2
+
+
 # 迭代版
 def for_count(lst, target):
-    counter = 0   # 定义局部变量
+    counter = 0  # 定义局部变量
     # 对 lst 中的每一个 element, 都执行这个操作
     for item in lst:
-        if item == target:
+        if item == target:  # True
             counter = counter + 1
     return counter
 
@@ -31,6 +35,7 @@ def tail_count(lst, target):
         if lst[0] == target:
             return inner(counter + 1, lst[1:], target)
         return inner(counter, lst[1:], target)
+
     return inner(0, lst, target)  # 此处调用
 
 
