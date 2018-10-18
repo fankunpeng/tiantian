@@ -12,5 +12,4 @@
   - n, i, j, k :: 整数
   - x :: 满足 s 限制的任意对象
 * LIST(顺序变长容器)
-** slice
-** 
+** operation
