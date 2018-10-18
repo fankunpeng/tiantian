@@ -14,13 +14,46 @@
 * LIST(顺序变长容器)
 ** operation
 *** x in s
-    - 如果 s 中某项和 x 相等，返回 True, 否则返回 False
-    - 示例
+    如果 s 中某项和 x 相等，返回 True, 否则返回 False
     #+BEGIN_SRC python
     s = [1, 2, 3, 4]
     x = 1
     result = x in s # result = True
     x = 5
     result = x in s # result = False
+    s = (1, 2, 3, 4)
+    x = 1
+    result = x in s # result = True
+    s = "hello"
+    x = "he"
+    result = x in s # result = True
     #+END_SRC
-*** 
+*** s + t
+    返回 s 和 t 连接之后的新对象
+    #+BEGIN_SRC python
+      s = [1, 2, 3]
+      t = [4, 5]
+      result = s + t # result = [1, 2, 3, 4, 5]
+      #+END_SRC
+*** s * n 
+    等同于 n 个 s 相加 
+    #+BEGIN_SRC python
+    result = s * 2 == s + s # result = True
+    #+END_SRC
+*** s[i]
+    返回索引为 i 处元素的值
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    result = s[0] # result = 1
+    result = s[-1] # result = 4
+    #+END_SRC
+*** len(s)
+    返回 s 的长度
+    #+BEGIN_SRC python
+    s = [1, 2, 3, 4]
+    result = len(s) # result = 4
+    #+END_SRC
+*** max(s)
+    返回 s 中值最大的项
+*** min(s)
+    返回 s 中值最小的项
