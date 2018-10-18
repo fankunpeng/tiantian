@@ -1,6 +1,4 @@
-* LIST(顺序变长容器)
-** slice
-*** ASCII art diagram (方便理解切片和索引)
+* 方便理解切片和索引
 #+BEGIN_SRC 
  +---+---+---+---+---+---+
  | P | y | t | h | o | n |
@@ -9,3 +7,10 @@
 -6  -5  -4  -3  -2  -1      slice position
    0   1   2   3   4   5    index position
 #+END_SRC
+* 约定
+  - s , t :: 同类型序列
+  - n, i, j, k :: 整数
+  - x :: 满足 s 限制的任意对象
+* LIST(顺序变长容器)
+** slice
+** 
